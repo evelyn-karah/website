@@ -1,3 +1,151 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://evelyn-karah.vip/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+theme = "blist"
+title = "Evelyn Karah's Playtoy"
+
+metaDataFormat = "yaml"
+
+DefaultContentLanguage = "en"
+DefaultContentLanguageInSubdir = true
+[languages]
+[languages.en]
+contentDir = "content/en" #English
+languageName = "English" 
+weight = 1 
+[languages.en.params]
+introPhoto = "/picture.jpg"
+introSubtitle = "26 y/o junior developer who enjoys social card games, blogging and painting"
+introTitle = "Hey! I'm Katheryn Fox"
+logo = "/blist-logo.png"
+[[languages.en.menu.main]]
+name = "Blog"
+url = "blog"
+weight = 1
+
+[[languages.en.menu.main]]
+name = "About"
+url = "page/about/"
+weight = 2
+
+[[languages.en.menu.main]]
+name = "Tags"
+url = "tags"
+weight = 3
+
+[[languages.en.menu.main]]
+name = "Top Post"
+url = "/en/blog/emoji-support/"
+weight = 4
+
+[languages.de]
+contentDir = "content/de" # Deutsch
+description = "Modernes Blog-Theme für Ihre Hugo-Site." 
+languageName = "Deutsch" 
+title = "Blist (mehrsprachig)" 
+weight = 2 
+[languages.de.params]
+introPhoto = "/picture.jpg"
+introSubtitle = "26-jährige Junior-Entwicklerin, die Spaß an sozialen Kartenspielen, Bloggen und Malen hat"
+introTitle = "Hallo, ich bin Katheryn Fox"
+logo = "/blist-logo-de.png"
+[[languages.de.menu.main]]
+name = "Blog"
+url = "blog"
+weight = 1
+
+[[languages.de.menu.main]]
+name = "Über mich"
+url = "page/about/"
+weight = 2
+
+[[languages.de.menu.main]]
+
+name = "Tags"
+url = "tags"
+weight = 3
+[languages.fr]
+contentDir = "content/fr" #French
+languageName = "Français" 
+weight = 1 
+[languages.fr.params]
+introPhoto = "/picture.jpg"
+introSubtitle = "Développeuse junior de 26 ans qui adore les jeux de société, le blogging et la peinture"
+introTitle = "Salut! Je suis Katheryn Fox"
+logo = "/blist-logo.png"
+[[languages.fr.menu.main]]
+name = "Blog"
+url = "blog"
+weight = 1
+
+[[languages.fr.menu.main]]
+name = "À propos"
+url = "page/about/"
+weight = 2
+
+[[languages.fr.menu.main]]
+
+name = "Tags"
+url = "tags"
+weight = 3
+[languages.dy]
+contentDir = "content/dy" #Example language
+languageName = "Test Language" 
+weight = 3 
+
+[params]
+# Enable the darkmode toggle in header
+
+darkModeToggle = true
+# Enable search in header
+enableSearch = true
+
+# Custom copyright - optional
+copyright = "Copyright © 2021 - Katheryn Fox · All rights reserved"
+favicon = "/favicon.svg"
+
+# Color for the intro details and social links block, not applicable for dark mode
+# Supported values: Any color from TailwindCSS default colors
+# Reference: https://tailwindcss.com/docs/customizing-colors
+ascentColor = "bg-blue-100"
+
+# The page bundle that is shown on the front page
+frontBundle = "blog"
+
+# Used to hide the post metadata such as posted date, reading time and word count
+# Can be used at site level or page level
+hideMeta = false
+
+# To hide "Other languages" option if the post is available in multiple languages
+# Can be used at site level or page level
+hideOtherLanguages = false
+
+[params.homepage.social]
+# Global params common for both languages
+description = "I work on everything coding and tweet developer memes"
+dribbble = "https://dribbble.com/"
+github = "https://github.com/"
+linkedin = "https://linkedin.com/in/"
+medium = "https://medium.com/"
+reddit = "https://reddit.com/"
+stackoverflow = "https://stackoverflow.com/"
+title = "Follow me"
+twitter = "https://twitter.com/"
+xing = "https://www.xing.com/profile/"
+
+[[menu.main]]
+name = "About"
+url = "/about"
+
+[build]
+writeStats = true
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+# syntax highlight settings
+[markup]
+[markup.highlight]
+style = "dracula"
+[markup.goldmark.renderer]
+# Enable to include inline HTML
+unsafe = true
